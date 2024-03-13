@@ -17,6 +17,14 @@ spec:
         value: /tmp/hf_hub_cache
       - name: TRANSFORMER_CACHE
         value: /tmp/transformers_cache
+      - name: MAX_INPUT_LENGTH
+        value: "4096"
+      - name: MAX_TOTAL_TOKENS
+        value: "8192"
+      - name: REMOVED_QUANTIZE
+        value: bitsandbytes-fp4
+      - name: MAX_BATCH_SIZE
+        value: "100000"
       #resources: # configure as required
       #  requests:
       #    nvidia.com/gpu: 1
