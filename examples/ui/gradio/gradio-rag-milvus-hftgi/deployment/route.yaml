@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: gradio-rag-milvus-hftgi
+  labels:
+    app: gradio-rag-milvus-hftgi
+spec: 
+  to:
+    kind: Service
+    name: gradio-rag-milvus-hftgi
+    weight: 100
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+  wildcardPolicy: None

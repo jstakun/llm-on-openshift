@@ -24,7 +24,7 @@ TOP_P = float(os.getenv('TOP_P', 0.95))
 TYPICAL_P = float(os.getenv('TYPICAL_P', 0.95))
 TEMPERATURE = float(os.getenv('TEMPERATURE', 0.01))
 REPETITION_PENALTY = float(os.getenv('REPETITION_PENALTY', 1.03))
-PROMPT_TEMPLATE="""<s>[INST]
+PROMPT_TEMPLATE=os.getenv('PROMPT_TEMPLATE', """<s>[INST]
 You are a helpful, respectful and honest assistant named HatBot. Always be as helpful as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
 I will ask you a QUESTION and give you an AUDIENCE PERSONA, and you will respond with an ANSWER easily understandable by the AUDIENCE PERSONA.
 If a QUESTION does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a QUESTION, please don't share false information.
@@ -40,7 +40,7 @@ Adults with reasonable technical understanding
 
 ### ANSWER:
 [/INST]
-"""
+""")
 
 # Class to handle parameters for easy update
 class ConfigManager:
