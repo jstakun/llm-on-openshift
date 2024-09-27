@@ -6,5 +6,5 @@ data:
   collections.json: |-
     [
       {"name":"none","display_name":"None"},
-      {"name":"collection_nomicai_embeddings","display_name":"Red Hat Openshift AI 2.9"}
+      {"name":"rhoai_collection","display_name":"Red Hat Openshift AI 2.10"}
     ]
